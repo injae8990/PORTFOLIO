@@ -1,615 +1,566 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PORTFOLIO</title>
-  <meta name="title" content="JangInJae PORTFOLIO">
-  <meta name="description" content="포트폴리오">
-  <meta name="keywords" content="포트폴리오, 장인재,">
-  <meta name="author" content="장인재">
-  <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="index, follow">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="PORTFOLIO">
-  <meta property="og:title" content="JangInJae PORTFOLIO">
-  <meta property="og:description" content="PORTFOLIO">
-  <meta property="og:image" content="img/stl.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <link rel="icon" href="favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Space+Mono:wght@400;700&family=Noto+Sans+KR:wght@300;400;500&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
-  <style>
-    html,
-    body {
-      height: 100%;
-      background-color: var(--cream);
-      background-image:
-        radial-gradient(ellipse at center, rgba(14, 18, 41, 0) 35%, rgba(14, 18, 41, 0.16) 78%, rgba(14, 18, 41, 0.40) 100%),
-        linear-gradient(rgba(14, 18, 41, 0.10), rgba(14, 18, 41, 0.10)),
-        url('img/stl.png');
-      background-size: cover, cover, cover;
-      background-position: center, center, center;
-      background-repeat: no-repeat, no-repeat, no-repeat;
-      background-attachment: fixed, fixed, fixed;
-      font-family: 'Noto Sans KR', sans-serif;
-      overflow: hidden;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PORTFOLIO</title>
+<link rel="icon" href="J.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Space+Mono:wght@400;700&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-  <img src="img/sign.png" class="injae-sign" alt="Injae Signature">
+<img src="img/sign.png" class="injae-sign" alt="Injae Signature">
 
-  <!-- DOTS -->
-  <div class="dots" id="dots">
-    <div class="dot active" onclick="globalGoTo(0)"></div>
-    <div class="dot" onclick="globalGoTo(1)"></div>
-    <div class="dot" onclick="globalGoTo(2)"></div>
-    <div class="dot" onclick="globalGoTo(3)"></div>
-    <div class="dot" onclick="globalGoTo(4)"></div>
-    <div class="dot" onclick="globalGoTo(5)"></div>
-  </div>
+<!-- DOTS -->
+<div class="dots" id="dots">
+  <div class="dot active" onclick="globalGoTo(0)"></div>
+  <div class="dot" onclick="globalGoTo(1)"></div>
+  <div class="dot" onclick="globalGoTo(2)"></div>
+  <div class="dot" onclick="globalGoTo(3)"></div>
+  <div class="dot" onclick="globalGoTo(4)"></div>
+  <div class="dot" onclick="globalGoTo(5)"></div>
+</div>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <button class="nav-btn" id="prevBtn" onclick="navigate(-1)" disabled>‹</button>
-    <span class="nav-count" id="navCount">01 / 06</span>
-    <button class="nav-btn" id="nextBtn" onclick="navigate(1)">›</button>
-  </nav>
+<!-- NAV -->
+<nav class="nav">
+  <button class="nav-btn" id="prevBtn" onclick="navigate(-1)" disabled>‹</button>
+  <span class="nav-count" id="navCount">01 / 06</span>
+  <button class="nav-btn" id="nextBtn" onclick="navigate(1)">›</button>
+</nav>
 
-  <!-- 단일 고정 스마트폰 -->
-  <div class="stage" id="stage">
-    <div class="pf-scale-wrap" id="pfScaleWrap">
-      <div class="rotate-shell" id="rotateShell"></div>
-      <div class="pf" id="pf">
-        <div class="pf-notch"></div>
-        <div class="pf-screen">
-          <div class="pf-inner" id="pfInner">
+<!-- 단일 고정 스마트폰 -->
+<div class="stage" id="stage">
+  <div class="pf-scale-wrap" id="pfScaleWrap">
+    <div class="rotate-shell" id="rotateShell"></div>
+    <div class="pf" id="pf">
+    <div class="pf-notch"></div>
+    <div class="pf-screen">
+      <div class="pf-inner" id="pfInner">
 
-            <!-- ═══ 세로 모드 콘텐츠 (1-3) ═══ -->
-            <div class="inner-slider" id="innerSlider">
+        <!-- ═══ 세로 모드 콘텐츠 (1-3) ═══ -->
+        <div class="inner-slider" id="innerSlider">
 
-              <!-- SLIDE 1: COVER -->
-              <div class="inner-slide navy">
+          <!-- SLIDE 1: COVER -->
+          <div class="inner-slide navy">
 
-                <div class="cover-title"><span>PORT<br>FOLIO</span></div>
+            <div class="cover-title"><span>PORT<br>FOLIO</span></div>
 
 
+          </div>
+
+          <!-- SLIDE 2: ABOUT (사진 기준) -->
+          <div class="inner-slide white" style="padding:20px 22px 12px; overflow:hidden;">
+
+
+            <!-- 이름 타이틀 -->
+            <div class="ab-name">JANGINJAE</div>
+
+            <!-- 아바타 + 바이오 -->
+            <div class="ab-profile-row">
+              <div class="ab-avatar">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                </svg>
               </div>
+              <div class="ab-bio-text">창의적인 영상편집자<br>장인재입니다</div>
+            </div>
 
-              <!-- SLIDE 2: ABOUT (사진 기준) -->
-              <div class="inner-slide white" style="padding:20px 22px 12px; overflow:hidden;">
+            <div class="ab-divider"></div>
 
+            <!-- EXPERIENCE -->
+            <div class="ab-row">
+              <div class="ab-row-label">EXPERIENCE</div>
+              <div class="ab-row-content">
+                <div class="ab-exp-date">2026.04 - 2026.10</div>
+                <div class="ab-exp-company">그린컴퓨터아카데미</div>
+                <div class="ab-exp-desc">&lt;멀티미디어&gt; 모션그래픽, 유튜브영상편<br>3D블렌더활용 과정 수료</div>
+              </div>
+            </div>
 
-                <!-- 이름 타이틀 -->
-                <div class="ab-name">JANGINJAE</div>
+            <!-- ABOUT -->
+            <div class="ab-row">
+              <div class="ab-row-label">ABOUT</div>
+              <div class="ab-row-content">
+                <div class="ab-info-line">janginjae</div>
+                <div class="ab-info-line">2007.11.05</div>
+                <div class="ab-info-line">+82 10-7452-8990</div>
+                <div class="ab-info-line">jangin8990@gmail.com</div>
+              </div>
+            </div>
 
-                <!-- 아바타 + 바이오 -->
-                <div class="ab-profile-row">
-                  <div class="ab-avatar">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+            <!-- SKILL -->
+            <div class="ab-row" style="border-bottom:none;">
+              <div class="ab-row-label">SKILL</div>
+              <div class="ab-row-content">
+                <div class="ab-skill-icons">
+                  <!-- Blender -->
+                  <div class="ab-skill-icon blender">
+                    <svg viewBox="0 0 24 24" width="20" height="20">
+                      <path fill="#EA7600" d="M12.51 13.214c.046-.8.438-1.506 1.03-2.006a3.424 3.424 0 0 1 2.212-.79c.85 0 1.631.3 2.211.79.592.5.983 1.206 1.028 2.005.045.823-.285 1.586-.865 2.153a3.389 3.389 0 0 1-2.374.938 3.393 3.393 0 0 1-2.376-.938c-.58-.567-.91-1.33-.865-2.152M7.35 14.831c.006.314.106.922.256 1.398a7.372 7.372 0 0 0 1.593 2.757 8.227 8.227 0 0 0 2.787 2.001 8.947 8.947 0 0 0 3.66.76 8.964 8.964 0 0 0 3.657-.772 8.285 8.285 0 0 0 2.785-2.01 7.428 7.428 0 0 0 1.592-2.762 6.964 6.964 0 0 0 .25-3.074 7.123 7.123 0 0 0-1.016-2.779 7.764 7.764 0 0 0-1.852-2.043h.002L13.566 2.55l-.02-.015c-.492-.378-1.319-.376-1.86.002-.547.382-.609 1.015-.123 1.415l-.001.001 3.126 2.543-9.53.01h-.013c-.788.001-1.545.518-1.695 1.172-.154.665.38 1.217 1.2 1.22V8.9l4.83-.01-8.62 6.617-.034.025c-.813.622-1.075 1.658-.563 2.313.52.667 1.625.668 2.447.004L7.414 14s-.069.52-.063.831zm12.09 1.741c-.97.988-2.326 1.548-3.795 1.55-1.47.004-2.827-.552-3.797-1.538a4.51 4.51 0 0 1-1.036-1.622 4.282 4.282 0 0 1 .282-3.519 4.702 4.702 0 0 1 1.153-1.371c.942-.768 2.141-1.183 3.396-1.185 1.256-.002 2.455.41 3.398 1.175.48.391.87.854 1.152 1.367a4.28 4.28 0 0 1 .522 1.706 4.236 4.236 0 0 1-.239 1.811 4.54 4.54 0 0 1-1.035 1.626"/>
+                      <circle cx="15.7" cy="13.3" r="2.9" fill="#215273"/>
                     </svg>
                   </div>
-                  <div class="ab-bio-text">창의적인 영상편집자<br>장인재입니다</div>
-                </div>
+                  <!-- Ps -->
+                  <div class="ab-skill-icon ps">Ps</div>
+                  <!-- Ae -->
+                  <div class="ab-skill-icon ae">Ae</div>
+                  <!-- Pr -->
+                  <div class="ab-skill-icon pr">Pr</div>
 
-                <div class="ab-divider"></div>
-
-                <!-- EXPERIENCE -->
-                <div class="ab-row">
-                  <div class="ab-row-label">EXPERIENCE</div>
-                  <div class="ab-row-content">
-                    <div class="ab-exp-date">2026.04 - 2026.10</div>
-                    <div class="ab-exp-company">그린컴퓨터아카데미</div>
-                    <div class="ab-exp-desc">&lt;멀티미디어&gt; 모션그래픽, 유튜브영상편<br>3D블렌더활용 과정 수료</div>
-                  </div>
-                </div>
-
-                <!-- ABOUT -->
-                <div class="ab-row">
-                  <div class="ab-row-label">ABOUT</div>
-                  <div class="ab-row-content">
-                    <div class="ab-info-line">janginjae</div>
-                    <div class="ab-info-line">2007.11.05</div>
-                    <div class="ab-info-line">+82 10-1234-1234</div>
-                    <div class="ab-info-line">jangin8990@gmail.com</div>
-                  </div>
-                </div>
-
-                <!-- SKILL -->
-                <div class="ab-row" style="border-bottom:none;">
-                  <div class="ab-row-label">SKILL</div>
-                  <div class="ab-row-content">
-                    <div class="ab-skill-icons">
-                      <!-- Ai -->
-                      <div class="ab-skill-icon ai">Ai</div>
-                      <!-- Ps -->
-                      <div class="ab-skill-icon ps">Ps</div>
-                      <!-- Ae -->
-                      <div class="ab-skill-icon ae">Ae</div>
-                      <!-- Pr -->
-                      <div class="ab-skill-icon pr">Pr</div>
-
-                      <!-- ChatGPT -->
-                      <div class="ab-skill-icon gpt">
-                        <svg viewBox="0 0 24 24" width="20" height="20">
-                          <path
-                            d="M22.28 9.28a5.76 5.76 0 0 0-.49-4.73 5.82 5.82 0 0 0-6.27-2.8A5.76 5.76 0 0 0 11.2 0a5.82 5.82 0 0 0-5.55 4.03 5.76 5.76 0 0 0-3.84 2.8 5.82 5.82 0 0 0 .72 6.82 5.76 5.76 0 0 0 .49 4.73 5.82 5.82 0 0 0 6.27 2.8A5.76 5.76 0 0 0 12.8 24a5.82 5.82 0 0 0 5.55-4.04 5.76 5.76 0 0 0 3.84-2.8 5.82 5.82 0 0 0-.71-6.88zM12.8 22.4a4.3 4.3 0 0 1-2.76-1 .16.16 0 0 1 .04-.05l4.59-2.65a.74.74 0 0 0 .37-.65v-6.47l1.94 1.12a.07.07 0 0 1 .04.06v5.36A4.32 4.32 0 0 1 12.8 22.4zM3.2 18.13a4.3 4.3 0 0 1-.52-2.9.16.16 0 0 1 .06.04l4.59 2.65a.74.74 0 0 0 .74 0l5.6-3.23v2.24a.07.07 0 0 1-.03.07L9 19.66a4.32 4.32 0 0 1-5.8-1.53zm-1.12-9.44a4.3 4.3 0 0 1 2.24-1.9v5.44a.74.74 0 0 0 .37.64l5.6 3.23-1.94 1.12a.07.07 0 0 1-.07 0L4.1 14.7A4.32 4.32 0 0 1 2.08 8.7zm15.97 3.71-5.6-3.23 1.94-1.12a.07.07 0 0 1 .07 0l4.18 2.41a4.32 4.32 0 0 1-.67 7.78v-5.44a.74.74 0 0 0-.37-.64l-.55.24zm1.93-2.91a.16.16 0 0 1-.06-.04L15.33 7.8a.74.74 0 0 0-.74 0L9 11.03V8.79a.07.07 0 0 1 .03-.07L13.2 6.3a4.32 4.32 0 0 1 6.43 4.47l-.35-.27zM8.07 13.12 6.13 12a.07.07 0 0 1-.04-.06V6.58a4.32 4.32 0 0 1 7.09-3.32.16.16 0 0 1-.04.05L8.55 5.96a.74.74 0 0 0-.37.65l-.11 6.51zm1.05-2.27 2.5-1.44 2.5 1.44v2.88l-2.5 1.44-2.5-1.44v-2.88z"
-                            fill="#10A37F" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 탭 바 -->
-                <div class="ab-tab-bar">
-                  <div class="ab-tab active">
-                    <!-- 그리드 아이콘 -->
-                    <svg viewBox="0 0 24 24">
-                      <path d="M3 3h7v7H3zm11 0h7v7h-7zM3 14h7v7H3zm11 0h7v7h-7z" />
-                    </svg>
-                  </div>
-                  <div class="ab-tab">
-                    <!-- 재생 아이콘 -->
-                    <svg viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                  <div class="ab-tab">
-                    <!-- 복사 아이콘 -->
-                    <svg viewBox="0 0 24 24">
-                      <path
-                        d="M16 1H4C2.9 1 2 1.9 2 3v14h2V3h12V1zm3 4H8C6.9 5 6 5.9 6 7v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+                  <!-- ChatGPT -->
+                  <div class="ab-skill-icon gpt">
+                    <svg viewBox="0 0 24 24" width="20" height="20">
+                      <path d="M22.28 9.28a5.76 5.76 0 0 0-.49-4.73 5.82 5.82 0 0 0-6.27-2.8A5.76 5.76 0 0 0 11.2 0a5.82 5.82 0 0 0-5.55 4.03 5.76 5.76 0 0 0-3.84 2.8 5.82 5.82 0 0 0 .72 6.82 5.76 5.76 0 0 0 .49 4.73 5.82 5.82 0 0 0 6.27 2.8A5.76 5.76 0 0 0 12.8 24a5.82 5.82 0 0 0 5.55-4.04 5.76 5.76 0 0 0 3.84-2.8 5.82 5.82 0 0 0-.71-6.88zM12.8 22.4a4.3 4.3 0 0 1-2.76-1 .16.16 0 0 1 .04-.05l4.59-2.65a.74.74 0 0 0 .37-.65v-6.47l1.94 1.12a.07.07 0 0 1 .04.06v5.36A4.32 4.32 0 0 1 12.8 22.4zM3.2 18.13a4.3 4.3 0 0 1-.52-2.9.16.16 0 0 1 .06.04l4.59 2.65a.74.74 0 0 0 .74 0l5.6-3.23v2.24a.07.07 0 0 1-.03.07L9 19.66a4.32 4.32 0 0 1-5.8-1.53zm-1.12-9.44a4.3 4.3 0 0 1 2.24-1.9v5.44a.74.74 0 0 0 .37.64l5.6 3.23-1.94 1.12a.07.07 0 0 1-.07 0L4.1 14.7A4.32 4.32 0 0 1 2.08 8.7zm15.97 3.71-5.6-3.23 1.94-1.12a.07.07 0 0 1 .07 0l4.18 2.41a4.32 4.32 0 0 1-.67 7.78v-5.44a.74.74 0 0 0-.37-.64l-.55.24zm1.93-2.91a.16.16 0 0 1-.06-.04L15.33 7.8a.74.74 0 0 0-.74 0L9 11.03V8.79a.07.07 0 0 1 .03-.07L13.2 6.3a4.32 4.32 0 0 1 6.43 4.47l-.35-.27zM8.07 13.12 6.13 12a.07.07 0 0 1-.04-.06V6.58a4.32 4.32 0 0 1 7.09-3.32.16.16 0 0 1-.04.05L8.55 5.96a.74.74 0 0 0-.37.65l-.11 6.51zm1.05-2.27 2.5-1.44 2.5 1.44v2.88l-2.5 1.44-2.5-1.44v-2.88z" fill="#10A37F"/>
                     </svg>
                   </div>
                 </div>
+              </div>
+            </div>
 
-                <!-- 썸네일 그리드 -->
-                <div class="ab-grid">
-                  <div class="ab-thumb" onclick="globalGoTo(2)">
-                    <div class="ab-thumb-inner" style="background:linear-gradient(160deg,#1e2d6e 0%,#0e1229 100%);">
-                    </div>
-                    <span class="ab-thumb-num">01</span>
-                  </div>
-                  <div class="ab-thumb" onclick="globalGoTo(3)">
-                    <div class="ab-thumb-inner" style="background:linear-gradient(160deg,#162060 0%,#0a0f22 100%);">
-                    </div>
-                    <span class="ab-thumb-num">02</span>
-                  </div>
-                  <div class="ab-thumb" onclick="globalGoTo(4)">
-                    <div class="ab-thumb-inner" style="background:linear-gradient(160deg,#1a2a5e 0%,#0e1229 100%);">
-                    </div>
-                    <span class="ab-thumb-num">03</span>
-                  </div>
+            <!-- 탭 바 -->
+            <div class="ab-tab-bar">
+              <div class="ab-tab active">
+                <!-- 그리드 아이콘 -->
+                <svg viewBox="0 0 24 24"><path d="M3 3h7v7H3zm11 0h7v7h-7zM3 14h7v7H3zm11 0h7v7h-7z"/></svg>
+              </div>
+              <div class="ab-tab">
+                <!-- 재생 아이콘 -->
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <div class="ab-tab">
+                <!-- 복사 아이콘 -->
+                <svg viewBox="0 0 24 24"><path d="M16 1H4C2.9 1 2 1.9 2 3v14h2V3h12V1zm3 4H8C6.9 5 6 5.9 6 7v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+              </div>
+            </div>
+
+            <!-- 썸네일 그리드 -->
+            <div class="ab-grid">
+              <div class="ab-thumb" onclick="globalGoTo(2)">
+                <div class="ab-thumb-inner" style="background:linear-gradient(rgba(10,14,34,0.25),rgba(10,14,34,0.25)), url('img/hyperSome1.png') center/cover no-repeat;"></div>
+                <span class="ab-thumb-num">01</span>
+              </div>
+              <div class="ab-thumb" onclick="globalGoTo(3)">
+                <div class="ab-thumb-inner" style="background:linear-gradient(rgba(10,14,34,0.25),rgba(10,14,34,0.25)), url('img/hyperSome2.png') center/cover no-repeat;"></div>
+                <span class="ab-thumb-num">02</span>
+              </div>
+              <div class="ab-thumb" onclick="globalGoTo(4)">
+                <div class="ab-thumb-inner" style="background:linear-gradient(rgba(10,14,34,0.25),rgba(10,14,34,0.25)), url('img/hyperSome3.png') center/cover no-repeat;"></div>
+                <span class="ab-thumb-num">03</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- MOBILE SLIDE 4: YOUTUBE VIDEO (세로 버전) -->
+          <div class="inner-slide white" style="padding:28px 22px 24px; display:flex; flex-direction:column; overflow:hidden;">
+            <div style="font-family:'Barlow Condensed',sans-serif; font-size:42px; font-weight:900; color:var(--navy); text-transform:uppercase; line-height:0.88; letter-spacing:-0.01em; margin-bottom:10px;">YOUTUBE<br>VIDEO</div>
+            <div style="display:flex; gap:5px; flex-wrap:wrap; margin-bottom:14px;">
+              <span style="font-family:'Space Mono',monospace; font-size:8px; border:1px solid var(--navy); color:var(--navy); padding:2px 8px; border-radius:2px; letter-spacing:0.06em;">YOUTUBE</span>
+              <span style="font-family:'Space Mono',monospace; font-size:8px; border:1px solid var(--navy); color:var(--navy); padding:2px 8px; border-radius:2px; letter-spacing:0.06em;">LONG-FORM</span>
+              <span style="font-family:'Space Mono',monospace; font-size:8px; border:1px solid var(--navy); color:var(--navy); padding:2px 8px; border-radius:2px; letter-spacing:0.06em;">CUT EDITING</span>
+            </div>
+            <!-- 유튜브 영상 -->
+            <div style="border-radius:10px; overflow:hidden; margin-bottom:14px; flex-shrink:0;">
+              <iframe
+                src="https://www.youtube.com/embed/HzyZ-rP7RvU?rel=0&modestbranding=1"
+                style="width:100%;height:168px;border:none;display:block;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <!-- 설명 텍스트 -->
+            <p style="font-family:'Noto Sans KR',sans-serif; font-size:14px; color:var(--gray); line-height:1.7; margin-bottom:16px; flex:1;">기존 인기 유튜버의 편집 스타일을 분석하고 유사하게 재현해본 프로젝트입니다.<br>실제 작업은 아니지만, 특정 크리에이터의 편집 문법을 따라 만들며 전반적인 편집 실력을 다진 프로젝트입니다.</p>
+            <!-- 하단 메타 -->
+            <div style="width:100%; height:1px; background:rgba(14,18,41,0.12); margin-bottom:14px; flex-shrink:0;"></div>
+            <div style="display:flex; gap:0; align-items:flex-start; flex-shrink:0;">
+              <div style="flex:1;">
+                <div style="font-family:'Space Mono',monospace; font-size:8px; color:var(--gray); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px;">WORK TIME</div>
+                <div style="display:flex; align-items:center; gap:6px;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" style="flex-shrink:0;">
+                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  <span style="font-family:'Barlow Condensed',sans-serif; font-size:22px; font-weight:900; color:var(--navy); text-transform:uppercase;">20 HOUR</span>
                 </div>
               </div>
-
-              <!-- MOBILE SLIDE 4: VIRAL STRATEGY (세로 버전) -->
-              <div class="inner-slide white"
-                style="padding:28px 22px 24px; display:flex; flex-direction:column; overflow:hidden;">
-                <div
-                  style="font-family:'Barlow Condensed',sans-serif; font-size:42px; font-weight:900; color:var(--navy); text-transform:uppercase; line-height:0.88; letter-spacing:-0.01em; margin-bottom:10px;">
-                  VIRAL<br>STRATEGY</div>
-                <div style="display:flex; gap:5px; flex-wrap:wrap; margin-bottom:14px;">
-                  <span
-                    style="font-family:'Space Mono',monospace; font-size:8px; border:1px solid var(--navy); color:var(--navy); padding:2px 8px; border-radius:2px; letter-spacing:0.06em;">YOUTUBE</span>
-                  <span
-                    style="font-family:'Space Mono',monospace; font-size:8px; border:1px solid var(--navy); color:var(--navy); padding:2px 8px; border-radius:2px; letter-spacing:0.06em;">SHORTS</span>
-                  <span
-                    style="font-family:'Space Mono',monospace; font-size:8px; border:1px solid var(--navy); color:var(--navy); padding:2px 8px; border-radius:2px; letter-spacing:0.06em;">PROMOTION</span>
+              <div style="flex:1;">
+                <div style="font-family:'Space Mono',monospace; font-size:8px; color:var(--gray); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px;">TOOL</div>
+                <div style="display:flex; align-items:center; gap:7px; margin-bottom:5px;">
+                  <div style="width:22px;height:22px;border-radius:5px;background:#00005B;color:#9999FF;display:flex;align-items:center;justify-content:center;font-family:'Arial Black',sans-serif;font-size:9px;font-weight:900;flex-shrink:0;">Pr</div>
+                  <span style="font-family:'Noto Sans KR',sans-serif;font-size:10px;color:var(--navy);font-weight:500;">Premiere Pro</span>
                 </div>
-                <!-- 유튜브 영상 -->
-                <div style="border-radius:10px; overflow:hidden; margin-bottom:14px; flex-shrink:0;">
-                  <iframe src="https://www.youtube.com/embed/9bZkp7q19f0?rel=0&modestbranding=1"
-                    style="width:100%;height:168px;border:none;display:block;"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                  </iframe>
+                <div style="display:flex; align-items:center; gap:7px; margin-bottom:5px;">
+                  <div style="width:22px;height:22px;border-radius:5px;background:#00005B;color:#9999FF;display:flex;align-items:center;justify-content:center;font-family:'Arial Black',sans-serif;font-size:9px;font-weight:900;flex-shrink:0;">Ae</div>
+                  <span style="font-family:'Noto Sans KR',sans-serif;font-size:10px;color:var(--navy);font-weight:500;">After Effects</span>
                 </div>
-                <!-- 설명 텍스트 -->
-                <p
-                  style="font-family:'Noto Sans KR',sans-serif; font-size:14px; color:var(--gray); line-height:1.7; margin-bottom:16px; flex:1;">
-                  유튜브 알고리즘을 분석한 최적의 호흡. 조회수 1.5M을 견인한 초반 3초 후킹 전략으로 제작된 바이럴 영상입니다.</p>
-                <!-- 하단 메타 -->
-                <div style="width:100%; height:1px; background:rgba(14,18,41,0.12); margin-bottom:14px; flex-shrink:0;">
-                </div>
-                <div style="display:flex; gap:0; align-items:flex-start; flex-shrink:0;">
-                  <div style="flex:1;">
-                    <div
-                      style="font-family:'Space Mono',monospace; font-size:8px; color:var(--gray); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px;">
-                      WORK TIME</div>
-                    <div style="display:flex; align-items:center; gap:6px;">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"
-                        style="flex-shrink:0;">
-                        <circle cx="12" cy="12" r="10" />
-                        <polyline points="12 6 12 12 16 14" />
-                      </svg>
-                      <span
-                        style="font-family:'Barlow Condensed',sans-serif; font-size:22px; font-weight:900; color:var(--navy); text-transform:uppercase;">04
-                        HOUR</span>
-                    </div>
-                  </div>
-                  <div style="flex:1;">
-                    <div
-                      style="font-family:'Space Mono',monospace; font-size:8px; color:var(--gray); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px;">
-                      TOOL</div>
-                    <div style="display:flex; align-items:center; gap:7px; margin-bottom:5px;">
-                      <div
-                        style="width:22px;height:22px;border-radius:5px;background:#00005B;color:#EA77FF;display:flex;align-items:center;justify-content:center;font-family:'Arial Black',sans-serif;font-size:9px;font-weight:900;flex-shrink:0;">
-                        Pr</div>
-                      <span
-                        style="font-family:'Noto Sans KR',sans-serif;font-size:10px;color:var(--navy);font-weight:500;">Premiere
-                        Pro</span>
-                    </div>
-                    <div style="display:flex; align-items:center; gap:7px;">
-                      <div
-                        style="width:22px;height:22px;border-radius:5px;background:#00005B;color:#9999FF;display:flex;align-items:center;justify-content:center;font-family:'Arial Black',sans-serif;font-size:9px;font-weight:900;flex-shrink:0;">
-                        Ae</div>
-                      <span
-                        style="font-family:'Noto Sans KR',sans-serif;font-size:10px;color:var(--navy);font-weight:500;">After
-                        Effects</span>
-                    </div>
-                  </div>
+                <div style="display:flex; align-items:center; gap:7px;">
+                  <div style="width:22px;height:22px;border-radius:5px;background:#001E36;color:#31A8FF;display:flex;align-items:center;justify-content:center;font-family:'Arial Black',sans-serif;font-size:9px;font-weight:900;flex-shrink:0;">Ps</div>
+                  <span style="font-family:'Noto Sans KR',sans-serif;font-size:10px;color:var(--navy);font-weight:500;">Photoshop</span>
                 </div>
               </div>
+            </div>
+          </div>
 
-              <!-- MOBILE SLIDE 5: BRAND FILM (세로 버전) -->
-              <div class="inner-slide white"
-                style="padding:28px 22px 24px; display:flex; flex-direction:column; overflow:hidden;">
-                <div
-                  style="font-family:'Barlow Condensed',sans-serif; font-size:42px; font-weight:900; color:var(--navy); text-transform:uppercase; line-height:0.88; letter-spacing:-0.01em; margin-bottom:10px;">
-                  BRAND<br>FILM</div>
-                <div style="display:flex; gap:5px; flex-wrap:wrap; margin-bottom:14px;">
-                  <span
-                    style="font-family:'Space Mono',monospace; font-size:8px; border:1px solid var(--navy); color:var(--navy); padding:2px 8px; border-radius:2px; letter-spacing:0.06em;">EMOTION</span>
-                  <span
-                    style="font-family:'Space Mono',monospace; font-size:8px; border:1px solid var(--navy); color:var(--navy); padding:2px 8px; border-radius:2px; letter-spacing:0.06em;">STORYTELLING</span>
-                  <span
-                    style="font-family:'Space Mono',monospace; font-size:8px; border:1px solid var(--navy); color:var(--navy); padding:2px 8px; border-radius:2px; letter-spacing:0.06em;">CF</span>
-                </div>
-                <div style="border-radius:10px; overflow:hidden; margin-bottom:14px; flex-shrink:0;">
-                  <iframe src="https://www.youtube.com/embed/LXb3EKWsInQ?rel=0&modestbranding=1"
-                    style="width:100%;height:168px;border:none;display:block;"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                  </iframe>
-                </div>
-                <p
-                  style="font-family:'Noto Sans KR',sans-serif; font-size:14px; color:var(--gray); line-height:1.7; margin-bottom:16px; flex:1;">
-                  브랜드가 전하고 싶은 진심을 영상 언어로 번역합니다. 감정 설계부터 컷 편집까지 원스톱으로 진행합니다.</p>
-                <div style="width:100%; height:1px; background:rgba(14,18,41,0.12); margin-bottom:14px; flex-shrink:0;">
-                </div>
-                <div style="display:flex; gap:0; align-items:flex-start; flex-shrink:0;">
-                  <div style="flex:1;">
-                    <div
-                      style="font-family:'Space Mono',monospace; font-size:8px; color:var(--gray); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px;">
-                      WORK TIME</div>
-                    <div style="display:flex; align-items:center; gap:6px;">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"
-                        style="flex-shrink:0;">
-                        <circle cx="12" cy="12" r="10" />
-                        <polyline points="12 6 12 12 16 14" />
-                      </svg>
-                      <span
-                        style="font-family:'Barlow Condensed',sans-serif; font-size:22px; font-weight:900; color:var(--navy); text-transform:uppercase;">08
-                        HOUR</span>
-                    </div>
-                  </div>
-                  <div style="flex:1;">
-                    <div
-                      style="font-family:'Space Mono',monospace; font-size:8px; color:var(--gray); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px;">
-                      TOOL</div>
-                    <div style="display:flex; align-items:center; gap:7px; margin-bottom:5px;">
-                      <div
-                        style="width:22px;height:22px;border-radius:5px;background:#00005B;color:#EA77FF;display:flex;align-items:center;justify-content:center;font-family:'Arial Black',sans-serif;font-size:9px;font-weight:900;flex-shrink:0;">
-                        Pr</div>
-                      <span
-                        style="font-family:'Noto Sans KR',sans-serif;font-size:10px;color:var(--navy);font-weight:500;">Premiere
-                        Pro</span>
-                    </div>
-                    <div style="display:flex; align-items:center; gap:7px; margin-bottom:5px;">
-                      <div
-                        style="width:22px;height:22px;border-radius:5px;background:#00005B;color:#9999FF;display:flex;align-items:center;justify-content:center;font-family:'Arial Black',sans-serif;font-size:9px;font-weight:900;flex-shrink:0;">
-                        Ae</div>
-                      <span
-                        style="font-family:'Noto Sans KR',sans-serif;font-size:10px;color:var(--navy);font-weight:500;">After
-                        Effects</span>
-                    </div>
-                    <div style="display:flex; align-items:center; gap:7px;">
-                      <div
-                        style="width:22px;height:22px;border-radius:5px;background:#001E36;color:#31A8FF;display:flex;align-items:center;justify-content:center;font-family:'Arial Black',sans-serif;font-size:9px;font-weight:900;flex-shrink:0;">
-                        Ps</div>
-                      <span
-                        style="font-family:'Noto Sans KR',sans-serif;font-size:10px;color:var(--navy);font-weight:500;">Photoshop</span>
-                    </div>
-                  </div>
+          <!-- MOBILE SLIDE 5: MOTION GRAPHICS (세로 버전) -->
+          <div class="inner-slide white" style="padding:28px 22px 24px; display:flex; flex-direction:column; overflow:hidden;">
+            <div style="font-family:'Barlow Condensed',sans-serif; font-size:42px; font-weight:900; color:var(--navy); text-transform:uppercase; line-height:0.88; letter-spacing:-0.01em; margin-bottom:10px;">MOTION<br>GRAPHICS</div>
+            <div style="display:flex; gap:5px; flex-wrap:wrap; margin-bottom:14px;">
+              <span style="font-family:'Space Mono',monospace; font-size:8px; border:1px solid var(--navy); color:var(--navy); padding:2px 8px; border-radius:2px; letter-spacing:0.06em;">TITLE</span>
+              <span style="font-family:'Space Mono',monospace; font-size:8px; border:1px solid var(--navy); color:var(--navy); padding:2px 8px; border-radius:2px; letter-spacing:0.06em;">YOUTUBE</span>
+              <span style="font-family:'Space Mono',monospace; font-size:8px; border:1px solid var(--navy); color:var(--navy); padding:2px 8px; border-radius:2px; letter-spacing:0.06em;">BLENDER</span>
+            </div>
+            <div style="border-radius:10px; overflow:hidden; margin-bottom:14px; flex-shrink:0;">
+              <iframe
+                src="https://www.youtube.com/embed/oNpMr6kHSIs?rel=0&modestbranding=1"
+                style="width:100%;height:168px;border:none;display:block;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <p style="font-family:'Noto Sans KR',sans-serif; font-size:14px; color:var(--gray); line-height:1.7; margin-bottom:16px; flex:1;">인기 유튜브 콘텐츠 "사나의 냉터뷰"를 위한 모션그래픽 타이틀 시퀀스 제작 프로젝트입니다.<br>콘텐츠만의 개성을 살려 창의적인 오프닝으로 재해석했습니다.</p>
+            <div style="width:100%; height:1px; background:rgba(14,18,41,0.12); margin-bottom:14px; flex-shrink:0;"></div>
+            <div style="display:flex; gap:0; align-items:flex-start; flex-shrink:0;">
+              <div style="flex:1;">
+                <div style="font-family:'Space Mono',monospace; font-size:8px; color:var(--gray); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px;">WORK TIME</div>
+                <div style="display:flex; align-items:center; gap:6px;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" style="flex-shrink:0;">
+                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  <span style="font-family:'Barlow Condensed',sans-serif; font-size:22px; font-weight:900; color:var(--navy); text-transform:uppercase;">08.31 ~ 09.21</span>
                 </div>
               </div>
-
-              <!-- MOBILE SLIDE 6: SHORT FORM (세로 버전) -->
-              <div class="inner-slide white"
-                style="padding:28px 22px 24px; display:flex; flex-direction:column; overflow:hidden;">
-                <div
-                  style="font-family:'Barlow Condensed',sans-serif; font-size:42px; font-weight:900; color:var(--navy); text-transform:uppercase; line-height:0.88; letter-spacing:-0.01em; margin-bottom:10px;">
-                  SHORT<br>FORM</div>
-                <div style="display:flex; gap:5px; flex-wrap:wrap; margin-bottom:14px;">
-                  <span
-                    style="font-family:'Space Mono',monospace; font-size:8px; border:1px solid var(--navy); color:var(--navy); padding:2px 8px; border-radius:2px; letter-spacing:0.06em;">REELS</span>
-                  <span
-                    style="font-family:'Space Mono',monospace; font-size:8px; border:1px solid var(--navy); color:var(--navy); padding:2px 8px; border-radius:2px; letter-spacing:0.06em;">SHORTS</span>
-                  <span
-                    style="font-family:'Space Mono',monospace; font-size:8px; border:1px solid var(--navy); color:var(--navy); padding:2px 8px; border-radius:2px; letter-spacing:0.06em;">TIKTOK</span>
+              <div style="flex:1;">
+                <div style="font-family:'Space Mono',monospace; font-size:8px; color:var(--gray); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px;">TOOL</div>
+                <div style="display:flex; align-items:center; gap:7px; margin-bottom:5px;">
+                  <div style="width:22px;height:22px;border-radius:5px;background:#00005B;color:#9999FF;display:flex;align-items:center;justify-content:center;font-family:'Arial Black',sans-serif;font-size:9px;font-weight:900;flex-shrink:0;">Pr</div>
+                  <span style="font-family:'Noto Sans KR',sans-serif;font-size:10px;color:var(--navy);font-weight:500;">Premiere Pro</span>
                 </div>
-                <div style="border-radius:10px; overflow:hidden; margin-bottom:14px; flex-shrink:0;">
-                  <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
-                    style="width:100%;height:168px;border:none;display:block;"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                  </iframe>
+                <div style="display:flex; align-items:center; gap:7px; margin-bottom:5px;">
+                  <div style="width:22px;height:22px;border-radius:5px;background:#00005B;color:#9999FF;display:flex;align-items:center;justify-content:center;font-family:'Arial Black',sans-serif;font-size:9px;font-weight:900;flex-shrink:0;">Ae</div>
+                  <span style="font-family:'Noto Sans KR',sans-serif;font-size:10px;color:var(--navy);font-weight:500;">After Effects</span>
                 </div>
-                <p
-                  style="font-family:'Noto Sans KR',sans-serif; font-size:14px; color:var(--gray); line-height:1.7; margin-bottom:16px; flex:1;">
-                  세로형 숏폼 콘텐츠 전문 편집. 플랫폼별 최적화된 컷 리듬과 자막 디자인으로 완성도 높은 숏폼을 제작합니다.</p>
-                <div style="width:100%; height:1px; background:rgba(14,18,41,0.12); margin-bottom:14px; flex-shrink:0;">
-                </div>
-                <div style="display:flex; gap:0; align-items:flex-start; flex-shrink:0;">
-                  <div style="flex:1;">
-                    <div
-                      style="font-family:'Space Mono',monospace; font-size:8px; color:var(--gray); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px;">
-                      WORK TIME</div>
-                    <div style="display:flex; align-items:center; gap:6px;">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"
-                        style="flex-shrink:0;">
-                        <circle cx="12" cy="12" r="10" />
-                        <polyline points="12 6 12 12 16 14" />
-                      </svg>
-                      <span
-                        style="font-family:'Barlow Condensed',sans-serif; font-size:22px; font-weight:900; color:var(--navy); text-transform:uppercase;">02
-                        HOUR</span>
-                    </div>
+                <div style="display:flex; align-items:center; gap:7px; margin-bottom:5px;">
+                  <div style="width:22px;height:22px;border-radius:5px;background:#fff;border:1px solid rgba(14,18,41,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <svg viewBox="0 0 24 24" width="15" height="15">
+                      <path fill="#EA7600" d="M12.51 13.214c.046-.8.438-1.506 1.03-2.006a3.424 3.424 0 0 1 2.212-.79c.85 0 1.631.3 2.211.79.592.5.983 1.206 1.028 2.005.045.823-.285 1.586-.865 2.153a3.389 3.389 0 0 1-2.374.938 3.393 3.393 0 0 1-2.376-.938c-.58-.567-.91-1.33-.865-2.152M7.35 14.831c.006.314.106.922.256 1.398a7.372 7.372 0 0 0 1.593 2.757 8.227 8.227 0 0 0 2.787 2.001 8.947 8.947 0 0 0 3.66.76 8.964 8.964 0 0 0 3.657-.772 8.285 8.285 0 0 0 2.785-2.01 7.428 7.428 0 0 0 1.592-2.762 6.964 6.964 0 0 0 .25-3.074 7.123 7.123 0 0 0-1.016-2.779 7.764 7.764 0 0 0-1.852-2.043h.002L13.566 2.55l-.02-.015c-.492-.378-1.319-.376-1.86.002-.547.382-.609 1.015-.123 1.415l-.001.001 3.126 2.543-9.53.01h-.013c-.788.001-1.545.518-1.695 1.172-.154.665.38 1.217 1.2 1.22V8.9l4.83-.01-8.62 6.617-.034.025c-.813.622-1.075 1.658-.563 2.313.52.667 1.625.668 2.447.004L7.414 14s-.069.52-.063.831zm12.09 1.741c-.97.988-2.326 1.548-3.795 1.55-1.47.004-2.827-.552-3.797-1.538a4.51 4.51 0 0 1-1.036-1.622 4.282 4.282 0 0 1 .282-3.519 4.702 4.702 0 0 1 1.153-1.371c.942-.768 2.141-1.183 3.396-1.185 1.256-.002 2.455.41 3.398 1.175.48.391.87.854 1.152 1.367a4.28 4.28 0 0 1 .522 1.706 4.236 4.236 0 0 1-.239 1.811 4.54 4.54 0 0 1-1.035 1.626"/>
+                      <circle cx="15.7" cy="13.3" r="2.9" fill="#215273"/>
+                    </svg>
                   </div>
-                  <div style="flex:1;">
-                    <div
-                      style="font-family:'Space Mono',monospace; font-size:8px; color:var(--gray); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px;">
-                      TOOL</div>
-                    <div style="display:flex; align-items:center; gap:7px; margin-bottom:5px;">
-                      <div
-                        style="width:22px;height:22px;border-radius:5px;background:#00005B;color:#EA77FF;display:flex;align-items:center;justify-content:center;font-family:'Arial Black',sans-serif;font-size:9px;font-weight:900;flex-shrink:0;">
-                        Pr</div>
-                      <span
-                        style="font-family:'Noto Sans KR',sans-serif;font-size:10px;color:var(--navy);font-weight:500;">Premiere
-                        Pro</span>
-                    </div>
-                    <div style="display:flex; align-items:center; gap:7px;">
-                      <div
-                        style="width:22px;height:22px;border-radius:5px;background:#00005B;color:#9999FF;display:flex;align-items:center;justify-content:center;font-family:'Arial Black',sans-serif;font-size:9px;font-weight:900;flex-shrink:0;">
-                        Ae</div>
-                      <span
-                        style="font-family:'Noto Sans KR',sans-serif;font-size:10px;color:var(--navy);font-weight:500;">After
-                        Effects</span>
-                    </div>
+                  <span style="font-family:'Noto Sans KR',sans-serif;font-size:10px;color:var(--navy);font-weight:500;">Blender</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:7px; margin-bottom:5px;">
+                  <div style="width:22px;height:22px;border-radius:5px;background:#fff;border:1px solid rgba(14,18,41,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <svg viewBox="0 0 24 24" width="15" height="15"><path fill="#10A37F" d="M22.28 9.28a5.76 5.76 0 0 0-.49-4.73 5.82 5.82 0 0 0-6.27-2.8A5.76 5.76 0 0 0 11.2 0a5.82 5.82 0 0 0-5.55 4.03 5.76 5.76 0 0 0-3.84 2.8 5.82 5.82 0 0 0 .72 6.82 5.76 5.76 0 0 0 .49 4.73 5.82 5.82 0 0 0 6.27 2.8A5.76 5.76 0 0 0 12.8 24a5.82 5.82 0 0 0 5.55-4.04 5.76 5.76 0 0 0 3.84-2.8 5.82 5.82 0 0 0-.71-6.88zM12.8 22.4a4.3 4.3 0 0 1-2.76-1 .16.16 0 0 1 .04-.05l4.59-2.65a.74.74 0 0 0 .37-.65v-6.47l1.94 1.12a.07.07 0 0 1 .04.06v5.36A4.32 4.32 0 0 1 12.8 22.4zM3.2 18.13a4.3 4.3 0 0 1-.52-2.9.16.16 0 0 1 .06.04l4.59 2.65a.74.74 0 0 0 .74 0l5.6-3.23v2.24a.07.07 0 0 1-.03.07L9 19.66a4.32 4.32 0 0 1-5.8-1.53zm-1.12-9.44a4.3 4.3 0 0 1 2.24-1.9v5.44a.74.74 0 0 0 .37.64l5.6 3.23-1.94 1.12a.07.07 0 0 1-.07 0L4.1 14.7A4.32 4.32 0 0 1 2.08 8.7zm15.97 3.71-5.6-3.23 1.94-1.12a.07.07 0 0 1 .07 0l4.18 2.41a4.32 4.32 0 0 1-.67 7.78v-5.44a.74.74 0 0 0-.37-.64l-.55.24zm1.93-2.91a.16.16 0 0 1-.06-.04L15.33 7.8a.74.74 0 0 0-.74 0L9 11.03V8.79a.07.07 0 0 1 .03-.07L13.2 6.3a4.32 4.32 0 0 1 6.43 4.47l-.35-.27zM8.07 13.12 6.13 12a.07.07 0 0 1-.04-.06V6.58a4.32 4.32 0 0 1 7.09-3.32.16.16 0 0 1-.04.05L8.55 5.96a.74.74 0 0 0-.37.65l-.11 6.51zm1.05-2.27 2.5-1.44 2.5 1.44v2.88l-2.5 1.44-2.5-1.44v-2.88z"/></svg>
                   </div>
+                  <span style="font-family:'Noto Sans KR',sans-serif;font-size:10px;color:var(--navy);font-weight:500;">ChatGPT</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:7px;">
+                  <div style="width:22px;height:22px;border-radius:5px;background:#fff;border:1px solid rgba(14,18,41,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <svg viewBox="0 0 24 24" width="15" height="15">
+                      <path fill="#B6FF3C" d="M3.4 1.2 L4.1 3.0 L5.9 3.7 L4.1 4.4 L3.4 6.2 L2.7 4.4 L0.9 3.7 L2.7 3.0 Z"/>
+                      <path fill="#141414" d="M12 5.2c3.9 0 7.1 3 7.1 6.7 0 2.1-1 3.9-2.6 5.1.9.5 2 .8 3.1.9.4 0 .5.5.2.7-1.6 1-3.6 1.4-5.5 1-1.1.6-2.4.9-3.7.9-1.4 0-2.7-.3-3.8-.9-1.9.4-3.8 0-5.4-1-.3-.2-.2-.7.2-.7 1.1-.1 2.2-.4 3.1-.9-1.6-1.2-2.6-3-2.6-5.1 0-3.7 3.2-6.7 7.1-6.7z"/>
+                      <path fill="#FF2E93" d="M6.3 10.4c0-2.9 2.6-5.2 5.7-5.2s5.7 2.3 5.7 5.2c0 .9-.3 1.8-.7 2.5-1.4.9-3.2 1.4-5 1.4s-3.6-.5-5-1.4c-.4-.7-.7-1.6-.7-2.5z"/>
+                      <rect x="9.5" y="8.4" width="1.3" height="3.4" rx="0.6" fill="#141414"/>
+                      <rect x="13.2" y="8.4" width="1.3" height="3.4" rx="0.6" fill="#141414"/>
+                      <path fill="#FFD9EC" d="M9 15.6c.9.5 1.9.8 3 .8s2.1-.3 3-.8c-.3 1.4-1.5 2.5-3 2.5s-2.7-1.1-3-2.5z"/>
+                    </svg>
+                  </div>
+                  <span style="font-family:'Noto Sans KR',sans-serif;font-size:10px;color:var(--navy);font-weight:500;">Meshy AI</span>
                 </div>
               </div>
+            </div>
+          </div>
 
-              <!-- MOBILE SLIDE 7: THANK YOU (세로 버전) -->
-              <div class="inner-slide navy">
-
-                <div class="mw-ty-title">THANK<br>YOU.</div>
-
+          <!-- MOBILE SLIDE 6: VIDEO CONTEST (세로 버전) -->
+          <div class="inner-slide white" style="padding:28px 22px 24px; display:flex; flex-direction:column; overflow:hidden;">
+            <div style="font-family:'Barlow Condensed',sans-serif; font-size:42px; font-weight:900; color:var(--navy); text-transform:uppercase; line-height:0.88; letter-spacing:-0.01em; margin-bottom:10px;">VIDEO<br>CONTEST</div>
+            <div style="display:flex; gap:5px; flex-wrap:wrap; margin-bottom:14px;">
+              <span style="font-family:'Space Mono',monospace; font-size:8px; border:1px solid var(--navy); color:var(--navy); padding:2px 8px; border-radius:2px; letter-spacing:0.06em;">AI</span>
+              <span style="font-family:'Space Mono',monospace; font-size:8px; border:1px solid var(--navy); color:var(--navy); padding:2px 8px; border-radius:2px; letter-spacing:0.06em;">CONTEST</span>
+            </div>
+            <div style="border-radius:10px; overflow:hidden; margin-bottom:14px; flex-shrink:0;">
+              <iframe
+                src="https://www.youtube.com/embed/b2GoMEjJlpA?rel=0&modestbranding=1"
+                style="width:100%;height:168px;border:none;display:block;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <p style="font-family:'Noto Sans KR',sans-serif; font-size:14px; color:var(--gray); line-height:1.7; margin-bottom:16px; flex:1;">소재를 주제로 한 AI 영상 공모전 출품작입니다.<br>동화「아기돼지 삼형제」를 모티프로, 무거운 주제를 동화적 상상력으로 유쾌하게 재해석했습니다.</p>
+            <div style="width:100%; height:1px; background:rgba(14,18,41,0.12); margin-bottom:14px; flex-shrink:0;"></div>
+            <div style="display:flex; gap:0; align-items:flex-start; flex-shrink:0;">
+              <div style="flex:1;">
+                <div style="font-family:'Space Mono',monospace; font-size:8px; color:var(--gray); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px;">WORK TIME</div>
+                <div style="display:flex; align-items:center; gap:6px;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" style="flex-shrink:0;">
+                    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  <span style="font-family:'Barlow Condensed',sans-serif; font-size:22px; font-weight:900; color:var(--navy); text-transform:uppercase;">08.24 ~ 09.15</span>
+                </div>
               </div>
+              <div style="flex:1;">
+                <div style="font-family:'Space Mono',monospace; font-size:8px; color:var(--gray); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px;">TOOL</div>
+                <div style="display:flex; align-items:center; gap:7px; margin-bottom:5px;">
+                  <div style="width:22px;height:22px;border-radius:5px;background:#00005B;color:#9999FF;display:flex;align-items:center;justify-content:center;font-family:'Arial Black',sans-serif;font-size:9px;font-weight:900;flex-shrink:0;">Pr</div>
+                  <span style="font-family:'Noto Sans KR',sans-serif;font-size:10px;color:var(--navy);font-weight:500;">Premiere Pro</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:7px; margin-bottom:5px;">
+                  <div style="width:22px;height:22px;border-radius:5px;background:#fff;border:1px solid rgba(14,18,41,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                    <svg viewBox="0 0 24 24" width="15" height="15"><path fill="#10A37F" d="M22.28 9.28a5.76 5.76 0 0 0-.49-4.73 5.82 5.82 0 0 0-6.27-2.8A5.76 5.76 0 0 0 11.2 0a5.82 5.82 0 0 0-5.55 4.03 5.76 5.76 0 0 0-3.84 2.8 5.82 5.82 0 0 0 .72 6.82 5.76 5.76 0 0 0 .49 4.73 5.82 5.82 0 0 0 6.27 2.8A5.76 5.76 0 0 0 12.8 24a5.82 5.82 0 0 0 5.55-4.04 5.76 5.76 0 0 0 3.84-2.8 5.82 5.82 0 0 0-.71-6.88zM12.8 22.4a4.3 4.3 0 0 1-2.76-1 .16.16 0 0 1 .04-.05l4.59-2.65a.74.74 0 0 0 .37-.65v-6.47l1.94 1.12a.07.07 0 0 1 .04.06v5.36A4.32 4.32 0 0 1 12.8 22.4zM3.2 18.13a4.3 4.3 0 0 1-.52-2.9.16.16 0 0 1 .06.04l4.59 2.65a.74.74 0 0 0 .74 0l5.6-3.23v2.24a.07.07 0 0 1-.03.07L9 19.66a4.32 4.32 0 0 1-5.8-1.53zm-1.12-9.44a4.3 4.3 0 0 1 2.24-1.9v5.44a.74.74 0 0 0 .37.64l5.6 3.23-1.94 1.12a.07.07 0 0 1-.07 0L4.1 14.7A4.32 4.32 0 0 1 2.08 8.7zm15.97 3.71-5.6-3.23 1.94-1.12a.07.07 0 0 1 .07 0l4.18 2.41a4.32 4.32 0 0 1-.67 7.78v-5.44a.74.74 0 0 0-.37-.64l-.55.24zm1.93-2.91a.16.16 0 0 1-.06-.04L15.33 7.8a.74.74 0 0 0-.74 0L9 11.03V8.79a.07.07 0 0 1 .03-.07L13.2 6.3a4.32 4.32 0 0 1 6.43 4.47l-.35-.27zM8.07 13.12 6.13 12a.07.07 0 0 1-.04-.06V6.58a4.32 4.32 0 0 1 7.09-3.32.16.16 0 0 1-.04.05L8.55 5.96a.74.74 0 0 0-.37.65l-.11 6.51zm1.05-2.27 2.5-1.44 2.5 1.44v2.88l-2.5 1.44-2.5-1.44v-2.88z"/></svg>
+                  </div>
+                  <span style="font-family:'Noto Sans KR',sans-serif;font-size:10px;color:var(--navy);font-weight:500;">ChatGPT</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:7px;">
+                  <div style="width:22px;height:22px;border-radius:5px;flex-shrink:0;overflow:hidden;">
+                    <svg viewBox="0 0 24 24" width="22" height="22"><rect x="0" y="0" width="24" height="24" rx="5" fill="#1A1A1A"/>
+                      <path fill="#fff" d="M7 5 H9.2 A6.7 6.7 0 0 1 9.2 18.4 H7 Z"/>
+                      <path fill="#fff" d="M13.6 5 H15.8 A6.7 6.7 0 0 1 15.8 18.4 H13.6 Z"/></svg>
+                  </div>
+                  <span style="font-family:'Noto Sans KR',sans-serif;font-size:10px;color:var(--navy);font-weight:500;">DropShot AI</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            </div><!-- /innerSlider -->
+          <!-- MOBILE SLIDE 7: THANK YOU (세로 버전) -->
+          <div class="inner-slide navy">
 
-          </div><!-- /pfInner -->
-        </div><!-- /pf-screen -->
-      </div><!-- /pf -->
-    </div><!-- /pf-scale-wrap -->
+            <div class="mw-ty-title">THANK<br>YOU.</div>
+            
+          </div>
 
-    <!-- ═══ 가로 모드 콘텐츠 (4-7) — 회전된 .pf 의 자식이 아닌 별도 오버레이.
+        </div><!-- /innerSlider -->
+
+      </div><!-- /pfInner -->
+    </div><!-- /pf-screen -->
+  </div><!-- /pf -->
+  </div><!-- /pf-scale-wrap -->
+
+  <!-- ═══ 가로 모드 콘텐츠 (4-7) — 회전된 .pf 의 자식이 아닌 별도 오버레이.
        이 요소에는 절대 transform:rotate() 를 적용하지 않음 -> 텍스트가
        회전 레이어로 합성되지 않아 흐려질 가능성이 원천적으로 없음 ═══ -->
-    <div class="ls-overlay" id="lsWrap" style="display:none;">
-      <div class="ls-notch"></div>
-      <div class="ls-screen">
-        <div class="ls-slider" id="lsSlider">
+  <div class="ls-overlay" id="lsWrap" style="display:none;">
+    <div class="ls-notch"></div>
+    <div class="ls-screen">
+    <div class="ls-slider" id="lsSlider">
 
-          <!-- LS SLIDE 1: VIRAL STRATEGY -->
-          <div class="ls-slide">
-            <div class="wd-body">
-              <!-- 좌: 정보 -->
-              <div class="wd-left">
-                <div class="wd-title">VIRAL<br>STRATEGY</div>
-                <div class="wd-tags">
-                  <span class="wd-tag">YOUTUBE</span>
-                  <span class="wd-tag">SHORTS</span>
-                  <span class="wd-tag">PROMOTION</span>
+      <!-- LS SLIDE 1: YOUTUBE VIDEO -->
+      <div class="ls-slide">
+        <div class="wd-body">
+          <!-- 좌: 정보 -->
+          <div class="wd-left">
+            <div class="wd-title">YOUTUBE<br>VIDEO</div>
+            <div class="wd-tags">
+              <span class="wd-tag">YOUTUBE</span>
+              <span class="wd-tag">LONG-FORM</span>
+              <span class="wd-tag">CUT EDITING</span>
+            </div>
+            <div class="wd-divider"></div>
+            <!-- WORK TIME -->
+            <div>
+              <div class="wd-meta-label">WORK TIME</div>
+              <div class="wd-time-row">
+                <svg class="wd-clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--navy);">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="wd-time-val">20 HOUR</span>
+              </div>
+            </div>
+            <div class="wd-divider"></div>
+            <!-- TOOL -->
+            <div>
+              <div class="wd-meta-label">TOOL</div>
+              <div class="wd-tool-row" style="display:grid; grid-template-columns:1fr 1fr; gap:calc(6px * var(--ls-scale)) calc(8px * var(--ls-scale));">
+                <div class="wd-tool-item">
+                  <div class="wd-tool-icon pr">Pr</div>
+                  <span class="wd-tool-name">Premiere Pro</span>
                 </div>
-                <div class="wd-divider"></div>
-                <!-- WORK TIME -->
-                <div>
-                  <div class="wd-meta-label">WORK TIME</div>
-                  <div class="wd-time-row">
-                    <svg class="wd-clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      style="color:var(--navy);">
-                      <circle cx="12" cy="12" r="10" />
-                      <polyline points="12 6 12 12 16 14" />
+                <div class="wd-tool-item">
+                  <div class="wd-tool-icon ae">Ae</div>
+                  <span class="wd-tool-name">After Effects</span>
+                </div>
+                <div class="wd-tool-item">
+                  <div class="wd-tool-icon ps">Ps</div>
+                  <span class="wd-tool-name">Photoshop</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 우: 설명 + 영상 -->
+          <div class="wd-right" style="display:flex; flex-direction:column; gap:calc(10px * var(--ls-scale));">
+            <p style="font-family:'Noto Sans KR',sans-serif; font-size:calc(10px * var(--ls-scale)); color:var(--gray); line-height:1.75; flex-shrink:0;">기존 인기 유튜버의 편집 스타일을 분석하고 유사하게 재현해본 프로젝트입니다.<br>실제 작업은 아니지만, 특정 크리에이터의 편집 문법을 따라 만들며 전반적인 편집 실력을 다진 프로젝트입니다.</p>
+            <div class="wd-player wd-player-lazy" style="margin-top:auto; cursor:pointer;" onclick="
+                this.classList.remove('wd-player-lazy');
+                this.innerHTML='<iframe src=\'https://www.youtube.com/embed/HzyZ-rP7RvU?autoplay=1\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen style=\'width:100%;height:100%;border:none;display:block;\'></iframe>';
+              ">
+              <img src="img/somena.png" alt="영상 썸네일" style="width:100%; height:100%; object-fit:cover; display:block;">
+              <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:68px; height:48px; background:rgba(0,0,0,0.7); border-radius:14px; display:flex; align-items:center; justify-content:center;">
+                <div style="width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid white; margin-left:4px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LS SLIDE 2: MOTION GRAPHICS -->
+      <div class="ls-slide">
+        <div class="wd-body">
+          <div class="wd-left" style="gap:0;">
+            <div class="wd-title" style="margin-bottom:calc(8px * var(--ls-scale));">MOTION<br>GRAPHICS</div>
+            <div class="wd-tags" style="margin-bottom:calc(8px * var(--ls-scale));">
+              <span class="wd-tag">TITLE</span>
+              <span class="wd-tag">YOUTUBE</span>
+              <span class="wd-tag">BLENDER</span>
+            </div>
+            <div class="wd-divider" style="flex-shrink:0; margin-bottom:calc(8px * var(--ls-scale));"></div>
+            <div style="margin-bottom:calc(8px * var(--ls-scale));">
+              <div class="wd-meta-label">WORK TIME</div>
+              <div class="wd-time-row">
+                <svg class="wd-clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--navy);">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="wd-time-val">08.31 ~ 09.21</span>
+              </div>
+            </div>
+            <div class="wd-divider" style="flex-shrink:0; margin-bottom:calc(8px * var(--ls-scale));"></div>
+            <div>
+              <div class="wd-meta-label">TOOL</div>
+              <!-- 2열 그리드 -->
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:calc(6px * var(--ls-scale)) calc(8px * var(--ls-scale));">
+                <div class="wd-tool-item">
+                  <div class="wd-tool-icon pr">Pr</div>
+                  <span class="wd-tool-name">Premiere Pro</span>
+                </div>
+                <div class="wd-tool-item">
+                  <div class="wd-tool-icon ae">Ae</div>
+                  <span class="wd-tool-name">After Effects</span>
+                </div>
+                <div class="wd-tool-item">
+                  <div class="wd-tool-icon blender">
+                    <svg viewBox="0 0 24 24" width="100%" height="100%">
+                      <path fill="#EA7600" d="M12.51 13.214c.046-.8.438-1.506 1.03-2.006a3.424 3.424 0 0 1 2.212-.79c.85 0 1.631.3 2.211.79.592.5.983 1.206 1.028 2.005.045.823-.285 1.586-.865 2.153a3.389 3.389 0 0 1-2.374.938 3.393 3.393 0 0 1-2.376-.938c-.58-.567-.91-1.33-.865-2.152M7.35 14.831c.006.314.106.922.256 1.398a7.372 7.372 0 0 0 1.593 2.757 8.227 8.227 0 0 0 2.787 2.001 8.947 8.947 0 0 0 3.66.76 8.964 8.964 0 0 0 3.657-.772 8.285 8.285 0 0 0 2.785-2.01 7.428 7.428 0 0 0 1.592-2.762 6.964 6.964 0 0 0 .25-3.074 7.123 7.123 0 0 0-1.016-2.779 7.764 7.764 0 0 0-1.852-2.043h.002L13.566 2.55l-.02-.015c-.492-.378-1.319-.376-1.86.002-.547.382-.609 1.015-.123 1.415l-.001.001 3.126 2.543-9.53.01h-.013c-.788.001-1.545.518-1.695 1.172-.154.665.38 1.217 1.2 1.22V8.9l4.83-.01-8.62 6.617-.034.025c-.813.622-1.075 1.658-.563 2.313.52.667 1.625.668 2.447.004L7.414 14s-.069.52-.063.831zm12.09 1.741c-.97.988-2.326 1.548-3.795 1.55-1.47.004-2.827-.552-3.797-1.538a4.51 4.51 0 0 1-1.036-1.622 4.282 4.282 0 0 1 .282-3.519 4.702 4.702 0 0 1 1.153-1.371c.942-.768 2.141-1.183 3.396-1.185 1.256-.002 2.455.41 3.398 1.175.48.391.87.854 1.152 1.367a4.28 4.28 0 0 1 .522 1.706 4.236 4.236 0 0 1-.239 1.811 4.54 4.54 0 0 1-1.035 1.626"/>
+                      <circle cx="15.7" cy="13.3" r="2.9" fill="#215273"/>
                     </svg>
-                    <span class="wd-time-val">04 HOUR</span>
                   </div>
+                  <span class="wd-tool-name">Blender</span>
                 </div>
-                <div class="wd-divider"></div>
-                <!-- TOOL -->
-                <div>
-                  <div class="wd-meta-label">TOOL</div>
-                  <div class="wd-tool-row">
-                    <div class="wd-tool-item">
-                      <div class="wd-tool-icon pr">Pr</div>
-                      <span class="wd-tool-name">Premiere Pro</span>
-                    </div>
-                    <div class="wd-tool-item">
-                      <div class="wd-tool-icon ae">Ae</div>
-                      <span class="wd-tool-name">After Effects</span>
-                    </div>
+                <div class="wd-tool-item">
+                  <div class="wd-tool-icon gpt">
+                    <svg viewBox="0 0 24 24" width="100%" height="100%"><path fill="#10A37F" d="M22.28 9.28a5.76 5.76 0 0 0-.49-4.73 5.82 5.82 0 0 0-6.27-2.8A5.76 5.76 0 0 0 11.2 0a5.82 5.82 0 0 0-5.55 4.03 5.76 5.76 0 0 0-3.84 2.8 5.82 5.82 0 0 0 .72 6.82 5.76 5.76 0 0 0 .49 4.73 5.82 5.82 0 0 0 6.27 2.8A5.76 5.76 0 0 0 12.8 24a5.82 5.82 0 0 0 5.55-4.04 5.76 5.76 0 0 0 3.84-2.8 5.82 5.82 0 0 0-.71-6.88zM12.8 22.4a4.3 4.3 0 0 1-2.76-1 .16.16 0 0 1 .04-.05l4.59-2.65a.74.74 0 0 0 .37-.65v-6.47l1.94 1.12a.07.07 0 0 1 .04.06v5.36A4.32 4.32 0 0 1 12.8 22.4zM3.2 18.13a4.3 4.3 0 0 1-.52-2.9.16.16 0 0 1 .06.04l4.59 2.65a.74.74 0 0 0 .74 0l5.6-3.23v2.24a.07.07 0 0 1-.03.07L9 19.66a4.32 4.32 0 0 1-5.8-1.53zm-1.12-9.44a4.3 4.3 0 0 1 2.24-1.9v5.44a.74.74 0 0 0 .37.64l5.6 3.23-1.94 1.12a.07.07 0 0 1-.07 0L4.1 14.7A4.32 4.32 0 0 1 2.08 8.7zm15.97 3.71-5.6-3.23 1.94-1.12a.07.07 0 0 1 .07 0l4.18 2.41a4.32 4.32 0 0 1-.67 7.78v-5.44a.74.74 0 0 0-.37-.64l-.55.24zm1.93-2.91a.16.16 0 0 1-.06-.04L15.33 7.8a.74.74 0 0 0-.74 0L9 11.03V8.79a.07.07 0 0 1 .03-.07L13.2 6.3a4.32 4.32 0 0 1 6.43 4.47l-.35-.27zM8.07 13.12 6.13 12a.07.07 0 0 1-.04-.06V6.58a4.32 4.32 0 0 1 7.09-3.32.16.16 0 0 1-.04.05L8.55 5.96a.74.74 0 0 0-.37.65l-.11 6.51zm1.05-2.27 2.5-1.44 2.5 1.44v2.88l-2.5 1.44-2.5-1.44v-2.88z"/></svg>
                   </div>
+                  <span class="wd-tool-name">ChatGPT</span>
                 </div>
-              </div>
-              <!-- 우: 설명 + 영상 -->
-              <div class="wd-right" style="display:flex; flex-direction:column; gap:calc(10px * var(--ls-scale));">
-                <p
-                  style="font-family:'Noto Sans KR',sans-serif; font-size:calc(10px * var(--ls-scale)); color:var(--gray); line-height:1.75; flex-shrink:0;">
-                  유튜브 알고리즘을 분석한 최적의 호흡.<br>조회수 1.5M을 견인한 초반 3초 후킹 전략입니다.</p>
-                <div class="wd-player" style="margin-top:auto;">
-                  <iframe src="https://www.youtube.com/embed/9bZkp7q19f0?rel=0&modestbranding=1"
-                    style="width:100%;height:100%;border:none;display:block;"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                  </iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- LS SLIDE 2: BRAND FILM -->
-          <div class="ls-slide">
-            <div class="wd-body">
-              <div class="wd-left" style="gap:0;">
-                <div class="wd-title" style="margin-bottom:calc(8px * var(--ls-scale));">BRAND<br>FILM</div>
-                <div class="wd-tags" style="margin-bottom:calc(8px * var(--ls-scale));">
-                  <span class="wd-tag">EMOTION</span>
-                  <span class="wd-tag">STORYTELLING</span>
-                  <span class="wd-tag">CF</span>
-                </div>
-                <div class="wd-divider" style="flex-shrink:0; margin-bottom:calc(8px * var(--ls-scale));"></div>
-                <div style="margin-bottom:calc(8px * var(--ls-scale));">
-                  <div class="wd-meta-label">WORK TIME</div>
-                  <div class="wd-time-row">
-                    <svg class="wd-clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      style="color:var(--navy);">
-                      <circle cx="12" cy="12" r="10" />
-                      <polyline points="12 6 12 12 16 14" />
+                <div class="wd-tool-item">
+                  <div class="wd-tool-icon meshy">
+                    <svg viewBox="0 0 24 24" width="100%" height="100%">
+                      <path fill="#B6FF3C" d="M3.4 1.2 L4.1 3.0 L5.9 3.7 L4.1 4.4 L3.4 6.2 L2.7 4.4 L0.9 3.7 L2.7 3.0 Z"/>
+                      <path fill="#141414" d="M12 5.2c3.9 0 7.1 3 7.1 6.7 0 2.1-1 3.9-2.6 5.1.9.5 2 .8 3.1.9.4 0 .5.5.2.7-1.6 1-3.6 1.4-5.5 1-1.1.6-2.4.9-3.7.9-1.4 0-2.7-.3-3.8-.9-1.9.4-3.8 0-5.4-1-.3-.2-.2-.7.2-.7 1.1-.1 2.2-.4 3.1-.9-1.6-1.2-2.6-3-2.6-5.1 0-3.7 3.2-6.7 7.1-6.7z"/>
+                      <path fill="#FF2E93" d="M6.3 10.4c0-2.9 2.6-5.2 5.7-5.2s5.7 2.3 5.7 5.2c0 .9-.3 1.8-.7 2.5-1.4.9-3.2 1.4-5 1.4s-3.6-.5-5-1.4c-.4-.7-.7-1.6-.7-2.5z"/>
+                      <rect x="9.5" y="8.4" width="1.3" height="3.4" rx="0.6" fill="#141414"/>
+                      <rect x="13.2" y="8.4" width="1.3" height="3.4" rx="0.6" fill="#141414"/>
+                      <path fill="#FFD9EC" d="M9 15.6c.9.5 1.9.8 3 .8s2.1-.3 3-.8c-.3 1.4-1.5 2.5-3 2.5s-2.7-1.1-3-2.5z"/>
                     </svg>
-                    <span class="wd-time-val">08 HOUR</span>
                   </div>
-                </div>
-                <div class="wd-divider" style="flex-shrink:0; margin-bottom:calc(8px * var(--ls-scale));"></div>
-                <div>
-                  <div class="wd-meta-label">TOOL</div>
-                  <!-- 2열 그리드 -->
-                  <div
-                    style="display:grid; grid-template-columns:1fr 1fr; gap:calc(6px * var(--ls-scale)) calc(8px * var(--ls-scale));">
-                    <div class="wd-tool-item">
-                      <div class="wd-tool-icon pr">Pr</div>
-                      <span class="wd-tool-name">Premiere Pro</span>
-                    </div>
-                    <div class="wd-tool-item">
-                      <div class="wd-tool-icon ps">Ps</div>
-                      <span class="wd-tool-name">Photoshop</span>
-                    </div>
-                    <div class="wd-tool-item">
-                      <div class="wd-tool-icon ae">Ae</div>
-                      <span class="wd-tool-name">After Effects</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- 우: 설명 + 영상 -->
-              <div class="wd-right" style="display:flex; flex-direction:column; gap:calc(10px * var(--ls-scale));">
-                <p
-                  style="font-family:'Noto Sans KR',sans-serif; font-size:calc(10px * var(--ls-scale)); color:var(--gray); line-height:1.75; flex-shrink:0;">
-                  브랜드가 전하고 싶은 진심을 영상 언어로 번역합니다.<br>감정 설계부터 컷 편집까지 원스톱으로 진행합니다.</p>
-                <div class="wd-player" style="margin-top:auto;">
-                  <iframe src="https://www.youtube.com/embed/LXb3EKWsInQ?rel=0&modestbranding=1"
-                    style="width:100%;height:100%;border:none;display:block;"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                  </iframe>
+                  <span class="wd-tool-name">Meshy AI</span>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- LS SLIDE 3: SHORT FORM -->
-          <div class="ls-slide">
-            <div class="wd-body">
-              <div class="wd-left">
-                <div class="wd-title">SHORT<br>FORM</div>
-                <div class="wd-tags">
-                  <span class="wd-tag">REELS</span>
-                  <span class="wd-tag">SHORTS</span>
-                  <span class="wd-tag">TIKTOK</span>
-                </div>
-                <div class="wd-divider"></div>
-                <div>
-                  <div class="wd-meta-label">WORK TIME</div>
-                  <div class="wd-time-row">
-                    <svg class="wd-clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      style="color:var(--navy);">
-                      <circle cx="12" cy="12" r="10" />
-                      <polyline points="12 6 12 12 16 14" />
-                    </svg>
-                    <span class="wd-time-val">02 HOUR</span>
-                  </div>
-                </div>
-                <div class="wd-divider"></div>
-                <div>
-                  <div class="wd-meta-label">TOOL</div>
-                  <div class="wd-tool-row">
-                    <div class="wd-tool-item">
-                      <div class="wd-tool-icon pr">Pr</div>
-                      <span class="wd-tool-name">Premiere Pro</span>
-                    </div>
-                    <div class="wd-tool-item">
-                      <div class="wd-tool-icon ae">Ae</div>
-                      <span class="wd-tool-name">After Effects</span>
-                    </div>
-                  </div>
-                </div>
+          <!-- 우: 설명 + 영상 -->
+          <div class="wd-right" style="display:flex; flex-direction:column; gap:calc(10px * var(--ls-scale));">
+            <p style="font-family:'Noto Sans KR',sans-serif; font-size:calc(10px * var(--ls-scale)); color:var(--gray); line-height:1.75; flex-shrink:0;">인기 유튜브 콘텐츠 "사나의 냉터뷰"를 위한 모션그래픽 타이틀 시퀀스 제작 프로젝트입니다.<br>콘텐츠만의 개성을 살려 창의적인 오프닝으로 재해석했습니다.</p>
+            <div class="wd-player wd-player-lazy" style="margin-top:auto; cursor:pointer;" onclick="
+                this.classList.remove('wd-player-lazy');
+                this.innerHTML='<iframe src=\'https://www.youtube.com/embed/oNpMr6kHSIs?rel=0&modestbranding=1&autoplay=1\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen style=\'width:100%;height:100%;border:none;display:block;\'></iframe>';
+              ">
+              <img src="img/fridge.png" alt="영상 썸네일" style="width:100%; height:100%; object-fit:cover; display:block;">
+              <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:68px; height:48px; background:rgba(0,0,0,0.7); border-radius:14px; display:flex; align-items:center; justify-content:center;">
+                <div style="width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid white; margin-left:4px;"></div>
               </div>
-              <!-- 우: 설명 + 영상 -->
-              <div class="wd-right" style="display:flex; flex-direction:column; gap:calc(10px * var(--ls-scale));">
-                <p
-                  style="font-family:'Noto Sans KR',sans-serif; font-size:calc(10px * var(--ls-scale)); color:var(--gray); line-height:1.75; flex-shrink:0;">
-                  세로형 숏폼 콘텐츠 전문 편집.<br>플랫폼별 최적화된 컷 리듬과 자막 디자인으로 완성도 높은 숏폼을 제작합니다.</p>
-                <div class="wd-player" style="margin-top:auto;">
-                  <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
-                    style="width:100%;height:100%;border:none;display:block;"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                  </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LS SLIDE 3: VIDEO CONTEST -->
+      <div class="ls-slide">
+        <div class="wd-body">
+          <div class="wd-left">
+            <div class="wd-title">VIDEO<br>CONTEST</div>
+            <div class="wd-tags">
+              <span class="wd-tag">AI</span>
+              <span class="wd-tag">CONTEST</span>
+          
+            </div>
+            <div class="wd-divider"></div>
+            <div>
+              <div class="wd-meta-label">WORK TIME</div>
+              <div class="wd-time-row">
+                <svg class="wd-clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--navy);">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="wd-time-val">08.24 ~ 09.15</span>
+              </div>
+            </div>
+            <div class="wd-divider"></div>
+            <div>
+              <div class="wd-meta-label">TOOL</div>
+              <div class="wd-tool-row" style="display:grid; grid-template-columns:1fr 1fr; gap:calc(6px * var(--ls-scale)) calc(8px * var(--ls-scale));">
+                <div class="wd-tool-item">
+                  <div class="wd-tool-icon pr">Pr</div>
+                  <span class="wd-tool-name">Premiere Pro</span>
+                </div>
+                <div class="wd-tool-item">
+                  <div class="wd-tool-icon gpt">
+                    <svg viewBox="0 0 24 24" width="100%" height="100%"><path fill="#10A37F" d="M22.28 9.28a5.76 5.76 0 0 0-.49-4.73 5.82 5.82 0 0 0-6.27-2.8A5.76 5.76 0 0 0 11.2 0a5.82 5.82 0 0 0-5.55 4.03 5.76 5.76 0 0 0-3.84 2.8 5.82 5.82 0 0 0 .72 6.82 5.76 5.76 0 0 0 .49 4.73 5.82 5.82 0 0 0 6.27 2.8A5.76 5.76 0 0 0 12.8 24a5.82 5.82 0 0 0 5.55-4.04 5.76 5.76 0 0 0 3.84-2.8 5.82 5.82 0 0 0-.71-6.88zM12.8 22.4a4.3 4.3 0 0 1-2.76-1 .16.16 0 0 1 .04-.05l4.59-2.65a.74.74 0 0 0 .37-.65v-6.47l1.94 1.12a.07.07 0 0 1 .04.06v5.36A4.32 4.32 0 0 1 12.8 22.4zM3.2 18.13a4.3 4.3 0 0 1-.52-2.9.16.16 0 0 1 .06.04l4.59 2.65a.74.74 0 0 0 .74 0l5.6-3.23v2.24a.07.07 0 0 1-.03.07L9 19.66a4.32 4.32 0 0 1-5.8-1.53zm-1.12-9.44a4.3 4.3 0 0 1 2.24-1.9v5.44a.74.74 0 0 0 .37.64l5.6 3.23-1.94 1.12a.07.07 0 0 1-.07 0L4.1 14.7A4.32 4.32 0 0 1 2.08 8.7zm15.97 3.71-5.6-3.23 1.94-1.12a.07.07 0 0 1 .07 0l4.18 2.41a4.32 4.32 0 0 1-.67 7.78v-5.44a.74.74 0 0 0-.37-.64l-.55.24zm1.93-2.91a.16.16 0 0 1-.06-.04L15.33 7.8a.74.74 0 0 0-.74 0L9 11.03V8.79a.07.07 0 0 1 .03-.07L13.2 6.3a4.32 4.32 0 0 1 6.43 4.47l-.35-.27zM8.07 13.12 6.13 12a.07.07 0 0 1-.04-.06V6.58a4.32 4.32 0 0 1 7.09-3.32.16.16 0 0 1-.04.05L8.55 5.96a.74.74 0 0 0-.37.65l-.11 6.51zm1.05-2.27 2.5-1.44 2.5 1.44v2.88l-2.5 1.44-2.5-1.44v-2.88z"/></svg>
+                  </div>
+                  <span class="wd-tool-name">ChatGPT</span>
+                </div>
+                <div class="wd-tool-item">
+                  <div class="wd-tool-icon" style="background:transparent; overflow:hidden;">
+                    <svg viewBox="0 0 24 24" width="100%" height="100%"><rect x="0" y="0" width="24" height="24" rx="5" fill="#1A1A1A"/>
+                      <path fill="#fff" d="M7 5 H9.2 A6.7 6.7 0 0 1 9.2 18.4 H7 Z"/>
+                      <path fill="#fff" d="M13.6 5 H15.8 A6.7 6.7 0 0 1 15.8 18.4 H13.6 Z"/></svg>
+                  </div>
+                  <span class="wd-tool-name">DropShot AI</span>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- LS SLIDE 4: THANK YOU -->
-          <div class="ls-slide dark">
-
-            <div class="work-body" style="align-items:center;">
-              <div class="work-left">
-                <div class="ty-title">THANK<br>YOU.</div>
-
+          <!-- 우: 설명 + 영상 -->
+          <div class="wd-right" style="display:flex; flex-direction:column; gap:calc(10px * var(--ls-scale));">
+            <p style="font-family:'Noto Sans KR',sans-serif; font-size:calc(10px * var(--ls-scale)); color:var(--gray); line-height:1.75; flex-shrink:0;">소재를 주제로 한 AI 영상 공모전 출품작입니다.<br>동화「아기돼지 삼형제」를 모티프로, 무거운 주제를 동화적 상상력으로 유쾌하게 재해석했습니다..</p>
+            <div class="wd-player wd-player-lazy" style="margin-top:auto; cursor:pointer;" onclick="
+                this.classList.remove('wd-player-lazy');
+                this.innerHTML='<iframe src=\'https://www.youtube.com/embed/b2GoMEjJlpA?rel=0&modestbranding=1&autoplay=1\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen style=\'width:100%;height:100%;border:none;display:block;\'></iframe>';
+              ">
+              <img src="img/pigi.png" alt="영상 썸네일" style="width:100%; height:100%; object-fit:cover; display:block;">
+              <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:68px; height:48px; background:rgba(0,0,0,0.7); border-radius:14px; display:flex; align-items:center; justify-content:center;">
+                <div style="width:0; height:0; border-top:12px solid transparent; border-bottom:12px solid transparent; border-left:20px solid white; margin-left:4px;"></div>
               </div>
-
             </div>
           </div>
+        </div>
+      </div>
 
-        </div><!-- /lsSlider -->
-      </div><!-- /ls-screen -->
-    </div><!-- /lsWrap -->
+      <!-- LS SLIDE 4: THANK YOU -->
+      <div class="ls-slide dark">
 
-  </div><!-- /stage -->
+        <div class="work-body" style="align-items:center;">
+          <div class="work-left">
+            <div class="ty-title">THANK<br>YOU.</div>
+
+          </div>
+  
+        </div>
+      </div>
+
+    </div><!-- /lsSlider -->
+    </div><!-- /ls-screen -->
+  </div><!-- /lsWrap -->
+
+</div><!-- /stage -->
+
+<script src="js/script.js"></script>
 </body>
-
 </html>
