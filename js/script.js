@@ -41,7 +41,7 @@ function applyResponsiveScale(){
   const baseW = isLandscape ? LS_W : PF_W;
   const baseH = isLandscape ? LS_H : PF_H;
   const scale = Math.min(1, availW / baseW, availH / baseH);
-  pfScaleWrap.style.transform = scale < 1 ? `scale(${scale})` : '';
+  pfScaleWrap.style.zoom = scale < 1 ? scale : '';
 
   toggleNavVisibility(scale, baseH);
 }
