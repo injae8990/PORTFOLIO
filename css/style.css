@@ -19,7 +19,7 @@ html, body {
   background-image:
     radial-gradient(ellipse at center, rgba(14,18,41,0) 35%, rgba(14,18,41,0.16) 78%, rgba(14,18,41,0.40) 100%),
     linear-gradient(rgba(14,18,41,0.10), rgba(14,18,41,0.10)),
-    url('stl.png');
+    url('../img/stl.png');
   background-size: cover, cover, cover;
   background-position: center, center, center;
   background-repeat: no-repeat, no-repeat, no-repeat;
